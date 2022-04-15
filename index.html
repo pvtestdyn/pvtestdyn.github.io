@@ -1,4 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Audience Scaling Request Page</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="styles/reqform.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+	<nav id="headerlinks">
+		<ul>
+			<li><a href="https://www.replace.com">Download Profile Pack File &#124;</a></li>
+			<li><a href="https://www.replace.com">Get in touch</a></li>
+		</ul>
+	</nav>
+	<header>
+		<!-- <h1>Audience Selector</h1> -->
+	</header>
+	<main class="content">
+		<!-- <h2>Select the audience.......</h2> -->
+		
+		<!-- <div id="shared-attributes" class="row"> -->
+		<section id="tray">
+			<ul id="trayList">
 
-<html>
-  test
+			</ul>
+		</section>	
+		
+		<section class="tocopy" id="paramarea">
+			<h4 class="attribute header">Attributes</h4>
+			
+			<input type="text" id="searchboxInput" onkeyup="searchbox()" placeholder="Search for attributes.." title="Type in a name">
+			
+			<ul id="paramlist">
+				  <li id="attribute1" class="attribute-item" draggable="true" ondragstart="drag(event)">Adele</li>
+				  <li id="attribute2" class="attribute-item" draggable="true" ondragstart="drag(event)">Agnes</li>
+				  <li id="attribute3" class="attribute-item" draggable="true" ondragstart="drag(event)">Billy</li>
+				  <li id="attribute4" class="attribute-item" draggable="true" ondragstart="drag(event)">Bob</li>
+				  <li id="attribute5" class="attribute-item" draggable="true" ondragstart="drag(event)">Calvin</li>
+				  <li id="attribute6" class="attribute-item" draggable="true" ondragstart="drag(event)">Christina</li>
+				  <li id="attribute7" class="attribute-item" draggable="true" ondragstart="drag(event)">Cindy</li>
+			</ul>
+		</section>
+	
+		<section id="audienceside">
+
+			<button id="open-button" class="open-button" onclick="openStartForm()">Build an audience</button>
+			<button id="reset-button" onclick="resetAll()">Reset</button>
+			<button id="submit-button" onclick="submit()">Submit</button>
+
+			<div class="form-popup" id="startPopup">
+				<div class="form-container">
+					<label for="audience name"><b>Give your audience a name</b></label>
+					<input id="aud name" type="text" placeholder="Audience name" name="audience name" required>
+
+					<div class="dropdown" id="dropdownCountry">
+						<button onclick="dropdownCountry()" class="dropbtn">Select a country</button>
+						<div id="dropdownContentCountry" class="dropdown-content">
+						  <p onclick="showySelectedCountry('UK')">UK</p>
+						  <p onclick="showySelectedCountry('USA')">USA</p>
+						  <p onclick="showySelectedCountry('Italy')">Italy</p>
+						</div>
+					</div>
+					<div id="countrySelected"></div>
+
+<!--closeStartForm()-->
+					<button type="button" class="btn confirm" onclick="closeStartForm()">Confirm</button>
+					</div>
+			</div>
+	
+			<div id="controlButtons">
+			<button onclick="boxFunction()">Add a criteria</button>
+			<button id="clear-button" onclick="clearCurrent()">Clear</button>
+			<button onclick="doneSelectingCriteria()" >Done</button>
+			
+			</div>
+			<!-- <div class="three"> -->
+			<!-- <form action="#" id="mainform" method="get" name="mainform"> -->
+			<span id="audienceContainer"></span>
+			<!-- </form-->
+			<!--</div>-->
+			
+		</section>
+		
+		
+
+
+				
+		
+	</main>	
+<!--	
+	<footer>
+		<nav id="footerlinks">
+			<ul>
+				<li><a href="about.html">Footer note &#124;</a></li>
+				<li><a href="copyright.html">blablabl</a></li>
+			</ul>
+		</nav>
+	</footer>
+-->
+<script src="js/reqform.js" type="text/javascript"></script>
+</body>
 </html>
