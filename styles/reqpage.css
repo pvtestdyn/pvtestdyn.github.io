@@ -1,0 +1,313 @@
+ * {
+	padding: 0;
+	margin: 0;
+	font-size: 100%;
+}
+
+body{
+	font-family: 'Montserrat', sans-serif;
+	color: hsl(3,100%,7%); /*#260200*/
+	margin: 1 rem auto;
+	width: 90% ;
+}
+
+main{
+	/* width: 50%; */
+	margin: 10px auto;
+	max-width: 76%;
+	padding: 1rem;
+}
+
+
+/* ======== HEADER ==========*/
+
+
+
+.dynata-logo{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+h1{
+	display: inline-block;
+	text-align: center;
+	padding: 2rem;
+}
+/* ========= FOOTER AND HEADER LINKS ============ */
+
+#headerlinks {
+	text-align: right;
+}
+
+
+#footerlinks {
+	border-top: 1px solid lightgrey;
+	padding-top: 1rem;
+	text-align: center;
+	clear: both;
+}
+
+#footerlinks li, #headerlinks li {
+	display: inline-block;
+	list-style: none;	
+	font-size: smaller;
+}
+
+#footerlinks a, #headerlinks a {
+	text-decoration: none;
+	color: #261700;
+	letter-spacing: 0.0625em;
+}
+
+#footerlinks a:hover, #headerlinks a:hover {
+	color: #D55049;
+}
+
+
+/* ========= OVERALL TITLES, PARAGRAPH AND SEMANTIC TAGS ============ */
+
+.content{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap-reverse;
+	justify-content:center;
+}
+
+
+/* Works on Firefox */
+* {
+	scrollbar-width: thin;
+	scrollbar-color: blue orange;
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+	width: 12px;
+  }
+  
+  *::-webkit-scrollbar-track {
+	background: orange;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+	background-color: blue;
+	border-radius: 20px;
+	border: 3px solid orange;
+  }
+
+
+  #searchboxInput{
+	  margin: 1rem 0rem 1rem 0rem;
+  }
+
+#paramarea {
+	width: 30rem;
+	max-height: 34rem;
+	margin-right: auto;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	border-bottom: 1px solid #727374;
+	/* overflow: auto; */
+}
+
+#paramlist {
+	max-height: 30rem;
+	overflow: auto;
+}
+
+#audienceside {
+	width: 35rem;
+	max-height: 50rem;
+	margin-left: auto;
+	/* overflow: auto; */
+}
+
+#audienceContainer{
+	overflow: auto;
+	max-height: 30rem;
+}
+
+
+
+.attribute-item {
+    padding: 0.5rem;
+    /* background-color: white; */
+    border: 1px solid black;
+    cursor: default;
+	list-style-type: none;
+}
+
+.attribute-item:active {
+    cursor: default;
+	/* cursor: grabbing; */
+}
+
+.attribute-item.dragging {
+    opacity: .5;
+}
+
+.attribute-item:hover {
+	background-color: lightblue;
+	} 
+
+/* .attribute-item{
+	border: 1px solid black;
+	cursor: move;
+	list-style-type: none;
+}*/
+
+
+
+.audiencebox {
+	width: 30rem;
+	height: auto;
+	min-width: 15rem;
+	background-color: lightgrey;
+	padding: 1rem;
+	text-align: left;
+	border: 1px solid black;
+}
+
+#controlButtons{
+	display: none;
+}
+
+
+  
+  /* The popup form - hidden by default */
+  .form-popup {
+	display: none;
+	/* position: fixed; */
+	/* bottom: 0;
+	right: 15px; */
+	border: 3px solid #f1f1f1;
+	/* z-index: 9; */
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+	width: 25rem;
+	/* padding: 0.5rem; */
+	background-color: white;
+  }
+  
+/* #labelname{
+	margin: .2rem 0rem 0rem 1rem;
+} */
+
+ #aud-name{
+	width: 20rem;
+	margin: .2rem 0rem 0rem 1rem;
+	padding: 1rem;
+	border: none;
+	background: #f1f1f1;
+ }
+
+ #aud-name:focus{
+	background-color: #ddd;
+	outline: none;
+ }
+
+  
+  
+  
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover, .open-button:hover {
+	opacity: 1;
+  }
+
+/* dropdown for country */
+.dropbtn {
+	background-color: #3498DB;
+	color: white;
+	margin: .2rem 0rem 0rem 1rem;
+	padding: 1rem;
+	width: 10.59rem;
+	border: none;
+	cursor: pointer;
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+	background-color: #2980B9;
+  }
+  
+  .dropdown {
+	position: relative;
+	/* display: inline-block; */
+	/* margin: 0rem 0rem 0rem .5rem; */
+  }
+  
+  .dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	/* min-width: 2rem; */
+	overflow: auto;
+	/* box-shadow: 1rem 3rem 1rem 0rem rgba(0,0,0,0.2); */
+	z-index: 1;
+	margin: 0rem 0rem 0rem 1rem;
+	overflow: auto;
+	max-height: 15rem;
+  }
+  
+  .dropdown-content p {
+	color: black;
+	padding: 1rem 2rem;
+	text-decoration: none;
+	/* display: block; */
+  }
+  
+  .dropdown p:hover {background-color: #ddd;}
+  
+  .show {display: block;}
+
+
+#countrySelected{
+	display: inline-block;
+	margin: 0%;
+}
+
+/* Set a style for the confirm button */
+.form-container .btn-confirm {
+	background-color: #04AA6D;
+	color: white;
+	margin: .2rem 0rem 0rem 1rem;
+	padding: 1rem;
+	width: 10.59rem;
+	border: none;
+	cursor: pointer;
+	opacity: 0.8;
+	/* display: block; */
+  }
+
+
+
+
+#reset-button{
+	display: none;
+}
+#submit-button{
+	display: none;
+}
+
+#tray{
+	display: none;
+	border: 1px solid black;
+	height: 3rem;
+}
+
+.audiencebox{
+	position: relative;
+}
+
+.audiencebox.drop {
+	border: 5px dashed rgb(163, 39, 39);
+}
+ 
+#drag-instruction{
+	position: absolute;
+	bottom: 0; 
+}
+
+
+
