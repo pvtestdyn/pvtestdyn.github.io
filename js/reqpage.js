@@ -276,8 +276,10 @@ function addToTray(){
 	il.innerHTML = audName;
 	audList.push(audName);
 	audListCheck.push(audNameCheck);
-	il.setAttribute("class","aud_in_tray")
-	document.getElementById("trayList").appendChild(il);
+	il.setAttribute("class","aud_in_tray");
+	let trayList = document.getElementById("trayList");
+	trayList.appendChild(il);
+	il.style.display="inline-block";
 	if(audienceCount==1){
 		document.getElementById("tray").style.display = "block";
 	}
@@ -365,20 +367,3 @@ function showSelectedCountry(c){
 	location.href = surveyurl+finObj;
 }
 
-  /**
-   * TO DO:
-   * check website for compatibility and standard compliance
-   * age in initial box
-   * add close button for popup
-   * only change cursor of attributes after box open
-   * populate list from JSON based on country
-   * change icon to audience from in progress to done https://www.flaticon.com/free-icons/progress
-   * add limit to characters on audience name
-   * allow to change an audience name while in preparation
-   * allow to review and modify audience details
-   * allow to delete audience while being prepared
-   * don't allow {[]}:/\*-+=&^%$£"' in names
-   * add footer with disclaimer?
-   * add donwload profile pack and get in touch links
-   * Change list per country
-   */

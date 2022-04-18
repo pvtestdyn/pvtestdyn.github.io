@@ -292,8 +292,21 @@ h1{
 
 #tray{
 	display: none;
-	border: 1px solid black;
-	height: 3rem;
+	border: 2px solid grey;
+    background-color: aliceblue;
+	padding: 1rem;
+    height: auto;
+
+}
+
+.aud_in_tray{
+	margin: .2rem .2rem .2rem .2rem;
+	border: burlywood;
+	background-color: cadetblue;
+	border-radius: .2rem;
+	padding: .5rem;
+	color: #ddd;
+	
 }
 
 .audiencebox{
