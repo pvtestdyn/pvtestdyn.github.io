@@ -323,6 +323,12 @@ function addToTray(){
 	addToTray();
   }
 
+  function closePopNoAction(){
+	document.getElementById("aud-name").value = "";
+	document.getElementById("countrySelected").innerText = "";
+	document.getElementById("startPopup").style.display = "none";
+  }
+
 
 
 /* When the user clicks on the button, 
@@ -366,4 +372,5 @@ function showSelectedCountry(c){
 	let finObj = JSON.stringify(audiencesObj);
 	location.href = surveyurl+finObj;
 }
+
 

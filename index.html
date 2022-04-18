@@ -3945,12 +3945,13 @@
 						</div>
 						
 						<button type="button" class="btn-confirm" onclick="closeStartForm()">Confirm</button>
+						<button type="button" id="close-pop-no-action" class="cancel-little-x" onclick="closePopNoAction()">X</button>
 					</div>
 				</div>
 				<div id="controlButtons">
-					<button onclick="boxFunction()">Add a criteria</button>
+					<button id="addCriteria-button" onclick="boxFunction()">Add a criteria</button>
 					<button id="clear-button" onclick="clearCurrent()">Clear</button>
-					<button onclick="doneSelectingCriteria()" >Done</button>
+					<button id="done-button" onclick="doneSelectingCriteria()" >Done</button>
 				</div>
 				<div id="audienceContainer">
 				</div>				

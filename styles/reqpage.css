@@ -177,11 +177,25 @@ h1{
   /* The popup form - hidden by default */
   .form-popup {
 	display: none;
+	width: 28rem;
 	/* position: fixed; */
 	/* bottom: 0;
 	right: 15px; */
 	border: 3px solid #f1f1f1;
 	/* z-index: 9; */
+	position: relative;
+  }
+
+  #close-pop-no-action{
+	  position: absolute;
+	  top: 0;
+	  right: 0;
+	  border: none;
+	  background-color: darkred;
+	  font-size: small;
+	  color: #ddd;
+	  border-radius: 1rem;
+	  padding: .5rem;
   }
   
   /* Add styles to the form container */
@@ -221,7 +235,7 @@ h1{
 	background-color: #3498DB;
 	color: white;
 	margin: .2rem 0rem 0rem 1rem;
-	padding: 1rem;
+	padding: .5rem;
 	width: 10.59rem;
 	border: none;
 	cursor: pointer;
@@ -272,7 +286,7 @@ h1{
 	background-color: #04AA6D;
 	color: white;
 	margin: .2rem 0rem 0rem 1rem;
-	padding: 1rem;
+	padding: .5rem;
 	width: 10.59rem;
 	border: none;
 	cursor: pointer;
@@ -320,6 +334,64 @@ h1{
 #drag-instruction{
 	position: absolute;
 	bottom: 0; 
+}
+
+
+#open-button{
+	background-color:rgb(178, 116, 2);
+	color: white;
+	margin: .2rem 0rem 0rem 1rem;
+	padding: .5rem;
+	width: 10rem;
+	border: none;
+	cursor: pointer;
+	opacity: 0.8;
+
+}
+
+#reset-button{
+	background-color:darkred;
+	color: white;
+	margin: .2rem 0rem 0rem 1rem;
+	padding: .5rem;
+	width: 10rem;
+	border: none;
+	cursor: pointer;
+	opacity: 0.8;
+
+}
+
+#addCriteria-button{
+	background-color:darkblue;
+	color: white;
+	margin: .2rem 0rem 0rem 1rem;
+	padding: .5rem;
+	width: 10rem;
+	border: none;
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+#clear-button, #done-button{
+	background-color:darkblue;
+	color: white;
+	margin: .2rem 0rem 0rem 0rem;
+	padding: .5rem;
+	width: 10rem;
+	border: none;
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+#submit-button{
+	background-color:darkgreen;
+	color: white;
+	margin: .2rem 0rem 0rem 0rem;
+	padding: .5rem;
+	width: 10rem;
+	border: none;
+	cursor: pointer;
+	opacity: 0.8;
 }
 
 
