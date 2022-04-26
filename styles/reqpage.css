@@ -1,398 +1,191 @@
- * {
-	padding: 0;
-	margin: 0;
-	font-size: 100%;
-}
 
-body{
-	font-family: 'Montserrat', sans-serif;
-	color: hsl(3,100%,7%); /*#260200*/
-	margin: 1 rem auto;
-	width: 90% ;
-}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
 
-main{
-	/* width: 50%; */
-	margin: 10px auto;
-	max-width: 76%;
-	padding: 1rem;
-}
+  } 
 
-
-/* ======== HEADER ==========*/
-
-
-
-.dynata-logo{
-	display: inline-block;
-	vertical-align: middle;
-}
-
-h1{
-	display: inline-block;
-	text-align: center;
-	padding: 2rem;
-}
-/* ========= FOOTER AND HEADER LINKS ============ */
-
-#headerlinks {
-	text-align: right;
-}
-
-
-#footerlinks {
-	border-top: 1px solid lightgrey;
-	padding-top: 1rem;
-	text-align: center;
-	clear: both;
-}
-
-#footerlinks li, #headerlinks li {
-	display: inline-block;
-	list-style: none;	
-	font-size: smaller;
-}
-
-#footerlinks a, #headerlinks a {
-	text-decoration: none;
-	color: #261700;
-	letter-spacing: 0.0625em;
-}
-
-#footerlinks a:hover, #headerlinks a:hover {
-	color: #D55049;
-}
-
-
-/* ========= OVERALL TITLES, PARAGRAPH AND SEMANTIC TAGS ============ */
-
-.content{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap-reverse;
-	justify-content:center;
-}
-
-
-/* Works on Firefox */
-* {
-	scrollbar-width: thin;
-	scrollbar-color: blue orange;
-  }
   
-  /* Works on Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-	width: 12px;
-  }
-  
-  *::-webkit-scrollbar-track {
-	background: orange;
-  }
-  
-  *::-webkit-scrollbar-thumb {
-	background-color: blue;
-	border-radius: 20px;
-	border: 3px solid orange;
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
   }
 
 
-  #searchboxInput{
-	  margin: 1rem 0rem 1rem 0rem;
+
+   #build{
+    margin: 1.5rem;
+  } 
+
+
+
+  section {
+    width: 50rem;
+    background: #fff;
+    padding: 1rem 1rem 1rem 1rem;
+    /* font-size: 18px; */
+    /* max-height: 270px; */ 
+    /* height: 60px auto; */
+    overflow: hidden;
+    transition: max-height 1s;
+    text-align: justify;
+    margin: 1rem;
+    border-radius: .5rem;
+    /* display: none; */
   }
 
-#paramarea {
-	width: 30rem;
-	max-height: 34rem;
-	margin-right: auto;
-	margin-top: 1rem;
-	margin-bottom: 1rem;
-	border-bottom: 1px solid #727374;
-	/* overflow: auto; */
+  /* p {
+    margin-bottom: 16px;
+  } */
+
+  /* section.open {
+    height: 400px; /* change to max-height*/
+
+  /* }  */
+
+  button {
+    background: #d8d7da;
+    color: rgb(32, 31, 80);
+    padding: .6rem;
+    margin: .2rem 0rem 0rem 1rem;
+    border: none;
+    border-radius: .2rem;
+  } 
+
+  button:hover {
+    cursor: pointer;
+    background: #696775;
+    color: beige;
+  } 
+
+
+.HEADERAUDIENCE{
+  position: relative;
 }
 
-#paramlist {
-	max-height: 30rem;
-	overflow: auto;
-}
-
-#audienceside {
-	width: 35rem;
-	max-height: 50rem;
-	margin-left: auto;
-	/* overflow: auto; */
-}
-
-#audienceContainer{
-	overflow: auto;
-	max-height: 30rem;
-}
-
-
-
-.attribute-item {
-    padding: 0.5rem;
-    /* background-color: white; */
-    border: 1px solid black;
-    cursor: default;
-	list-style-type: none;
-}
-
-.attribute-item:active {
-    cursor: default;
-	/* cursor: grabbing; */
-}
-
-.attribute-item.dragging {
-    opacity: .5;
-}
-
-.attribute-item:hover {
-	background-color: lightblue;
-	} 
-
-/* .attribute-item{
-	border: 1px solid black;
-	cursor: move;
-	list-style-type: none;
-}*/
-
-
-
-.audiencebox {
-	width: 30rem;
-	height: auto;
-	min-width: 15rem;
-	background-color: lightgrey;
-	padding: 1rem;
-	text-align: left;
-	border: 1px solid black;
-}
-
-#controlButtons{
-	display: none;
-}
-
-
-  
-  /* The popup form - hidden by default */
-  .form-popup {
-	display: none;
-	width: 28rem;
-	/* position: fixed; */
-	/* bottom: 0;
-	right: 15px; */
-	border: 3px solid #f1f1f1;
-	/* z-index: 9; */
-	position: relative;
+  .expandBtn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
   }
 
-  #close-pop-no-action{
-	  position: absolute;
-	  top: 0;
-	  right: 0;
-	  border: none;
-	  background-color: darkred;
-	  font-size: small;
-	  color: #ddd;
-	  border-radius: 1rem;
-	  padding: .5rem;
-  }
-  
-  /* Add styles to the form container */
-  .form-container {
-	width: 25rem;
-	/* padding: 0.5rem; */
-	background-color: white;
-  }
-  
-/* #labelname{
-	margin: .2rem 0rem 0rem 1rem;
-} */
-
- #aud-name{
-	width: 20rem;
-	margin: .2rem 0rem 0rem 1rem;
-	padding: 1rem;
-	border: none;
-	background: #f1f1f1;
- }
-
- #aud-name:focus{
-	background-color: #ddd;
-	outline: none;
- }
-
-  
-  
-  
-  /* Add some hover effects to buttons */
-  .form-container .btn:hover, .open-button:hover {
-	opacity: 1;
+  .audiencename-box{
+    margin: 0rem 0rem 0rem 1rem;
+    border-radius: 0.1rem;
+    border: .1rem solid rgb(175, 175, 175);
+    height: 2.4rem;
+    width: 25rem;
+    padding-left: 1rem;
   }
 
-/* dropdown for country */
-.dropbtn {
-	background-color: #3498DB;
-	color: white;
-	margin: .2rem 0rem 0rem 1rem;
-	padding: .5rem;
-	width: 10.59rem;
-	border: none;
-	cursor: pointer;
-  }
-  
-  .dropbtn:hover, .dropbtn:focus {
-	background-color: #2980B9;
-  }
-  
-  .dropdown {
-	position: relative;
-	/* display: inline-block; */
-	/* margin: 0rem 0rem 0rem .5rem; */
-  }
-  
-  .dropdown-content {
-	display: none;
-	position: absolute;
-	background-color: #f1f1f1;
-	/* min-width: 2rem; */
-	overflow: auto;
-	/* box-shadow: 1rem 3rem 1rem 0rem rgba(0,0,0,0.2); */
-	z-index: 1;
-	margin: 0rem 0rem 0rem 1rem;
-	overflow: auto;
-	max-height: 15rem;
-  }
-  
-  .dropdown-content p {
-	color: black;
-	padding: 1rem 2rem;
-	text-decoration: none;
-	/* display: block; */
-  }
-  
-  .dropdown p:hover {background-color: #ddd;}
-  
-  .show {display: block;}
+  .country-btn{
+    /* height: 1rem; */
+    /* padding: .5rem .5rem .5rem .5rem; */
 
+  }
 
-#countrySelected{
-	display: inline-block;
-	margin: 0%;
+.ageBox{
+  width: 2.2rem;
+  height: 2.2rem;
+  margin: .5rem;
+  border-radius: .1rem;
+  border: .1rem solid rgb(175, 175, 175);
+  text-align: center;
 }
 
-/* Set a style for the confirm button */
-.form-container .btn-confirm {
-	background-color: #04AA6D;
-	color: white;
-	margin: .2rem 0rem 0rem 1rem;
-	padding: .5rem;
-	width: 10.59rem;
-	border: none;
-	cursor: pointer;
-	opacity: 0.8;
-	/* display: block; */
+.innerBox{
+  position: relative;
+  margin: 1rem;
+}
+
+.addCriteriaBtn{
+  position: absolute;
+  right: 0;
+  margin-right: 2rem;
+}
+
+
+.criteriaBox{
+  border: .16rem solid rgb(172, 172, 215);
+  margin: 1rem .5rem 1.5rem .5rem;
+  padding: .2rem;
+  border-radius: .5rem;
+}
+
+.criteriaBox p{
+  margin: .2rem 0rem 0rem .5rem;
+}
+
+.HEADERCRITERIA{
+  position: relative;
+  margin: .5rem;
+}
+  .tray{
+    /* position: absolute; */
+    min-height: 2rem;
+    width: 40rem;
+    border: .16rem solid gray;
+    border-radius: .5rem;
+  }
+  .expand-attributes-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2rem;
+    margin: 0;
+    padding: .5rem;
+  }
+
+
+.CONTENTCRITERIA{
+  position: relative;
+} 
+  .search-attribute-box{
+    height: 2rem;
+    position:absolute;
+    left: 0;
+    right: 0;
+    margin: 0rem 4rem 0rem .6rem;
+    border-radius: .1rem;
+    border: 0.1rem solid rgb(175, 175, 175);
+  }
+
+  .attributeSelectItem{
+    overflow: auto;
+    margin: 2rem 4rem 0rem .6rem;
+    height: 20rem;
+    width: 39.65rem;
+  }
+
+  .attribute{
+    padding: .5rem;
+    border-radius: .1rem;
+    border: .1rem solid rgb(175, 175, 175);
+  }
+
+  .attribute:hover {
+    cursor: pointer;
+    background: #696775;
+    color: beige;
   }
 
 
 
 
-#reset-button{
-	display: none;
-}
-#submit-button{
-	display: none;
-}
-
-#tray{
-	display: none;
-	border: 2px solid grey;
-    background-color: aliceblue;
-	padding: 1rem;
-    height: auto;
-
-}
-
-.aud_in_tray{
-	margin: .2rem .2rem .2rem .2rem;
-	border: burlywood;
-	background-color: cadetblue;
-	border-radius: .2rem;
-	padding: .5rem;
-	color: #ddd;
-	
-}
-
-.audiencebox{
-	position: relative;
-}
-
-.audiencebox.drop {
-	border: 5px dashed rgb(163, 39, 39);
-}
- 
-#drag-instruction{
-	position: absolute;
-	bottom: 0; 
-}
 
 
-#open-button{
-	background-color:rgb(178, 116, 2);
-	color: white;
-	margin: .2rem 0rem 0rem 1rem;
-	padding: .5rem;
-	width: 10rem;
-	border: none;
-	cursor: pointer;
-	opacity: 0.8;
 
-}
 
-#reset-button{
-	background-color:darkred;
-	color: white;
-	margin: .2rem 0rem 0rem 1rem;
-	padding: .5rem;
-	width: 10rem;
-	border: none;
-	cursor: pointer;
-	opacity: 0.8;
 
-}
 
-#addCriteria-button{
-	background-color:darkblue;
-	color: white;
-	margin: .2rem 0rem 0rem 1rem;
-	padding: .5rem;
-	width: 10rem;
-	border: none;
-	cursor: pointer;
-	opacity: 0.8;
-}
-
-#clear-button, #done-button{
-	background-color:darkblue;
-	color: white;
-	margin: .2rem 0rem 0rem 0rem;
-	padding: .5rem;
-	width: 10rem;
-	border: none;
-	cursor: pointer;
-	opacity: 0.8;
-}
-
-#submit-button{
-	background-color:darkgreen;
-	color: white;
-	margin: .2rem 0rem 0rem 0rem;
-	padding: .5rem;
-	width: 10rem;
-	border: none;
-	cursor: pointer;
-	opacity: 0.8;
-}
 
 
 
