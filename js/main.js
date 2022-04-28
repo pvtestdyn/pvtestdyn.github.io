@@ -1,6 +1,7 @@
 
 /**
  * prototype, work in progress.
+ * Contains all aiudiences craeted.
  */
 class Main{
     constructor(){
@@ -25,10 +26,10 @@ buildBtn.addEventListener("click", function(){
 });
 
 /**
- * Add selection event listener to the attribute list.
+ * Adds selection to the attributes list (tray) on top of the criteria box.
  * On attribute selection, add it to tray and store it in attribute list.
- * @param {*} selectElem 
- * @param {*} tray 
+ * @param {HTMLSelectElement} selectElem attribute selected from the drowpown menu. 
+ * @param {HTMLDivElement} tray container with selected attributes.
  */
 function selectAttribute(selectElem, tray) {
     let option = selectElem.options[selectElem.selectedIndex];
@@ -76,7 +77,11 @@ function selectAttribute(selectElem, tray) {
     })
 }
 
-
+/**
+ * Accordion effect. Expand or retract on click.
+ * @param {HTMLDivElement} elem an element to expand, like the audience or criteria box.
+ * @param {HTMLButtonElement} button accordion button.
+ */
 function expand(elem, button) {
     if (button.innerHTML === "▲"){
         elem.style.display = "none";
@@ -90,8 +95,8 @@ function expand(elem, button) {
 
 /**
  * Searches attribute list.
- * @param {*} input search box related to the attribute list
- * @param {*} sel <select> element contaning the attributes
+ * @param {HTMLInputElement} input search box related to the attribute list
+ * @param {HTMLSelectElement} sel <select> element contaning the attributes
  */
   function searchbox(input, sel) {
     let filter, i, txtValue;

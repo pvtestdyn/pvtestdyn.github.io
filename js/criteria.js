@@ -6,8 +6,8 @@
         this.audNumber = audience.audNumber;
         this.criNumber = audience.criteriaCount;
         this.attributeList = [];
-        this.PageTrayItemsIDList = []; // ids attributes in tray
-        this.PageOptionItemsIDList = []; // ids of attributes in dropdown .. maybe not needed
+        this.PageTrayItemsIDList = []; // ids attributes in tray. Might come off
+        this.PageOptionItemsIDList = []; // ids of attributes in dropdown .. might come off.. not in use..
         this.createCriteriaContainer();
     }
     /**
