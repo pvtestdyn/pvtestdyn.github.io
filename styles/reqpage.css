@@ -1,5 +1,4 @@
-
-  
+ 
  :root {
   --colour-1: rgb(15, 157, 88);
   --colour-2: #fff;
@@ -21,7 +20,8 @@
   
   body {
     background-image: url("../imgs/tower-bridge__.jpg");
-    background-size:cover; background-repeat:no-repeat;
+    background-size:cover; 
+    background-repeat:no-repeat;
     font-family: 'Montserrat', sans-serif;
     /* background: var(--colour-2); */
     display: flex;
@@ -131,7 +131,7 @@
 
   .country-option{
     height: 3rem;
-    /* border: .1rem solid var(--colour-5); */
+  
   }
 
 
@@ -259,32 +259,19 @@
   } 
 
 
- 
-   .parameter-name{
-    display: block;
-    font-size: small;
+  .category{
+    padding: 1rem 0rem 0rem .5rem;
+
     
-    word-wrap: break-word;
   }
-  .answer-text{
-    display: block;
-    font-style: italic;
-    word-wrap: break-word;
-  }  
 
-
-/* 
-   .attributeP span { 
-     display: block;
-     
-  } */
-
-   /* .category{
-    /* font-weight: bold;
-    font-size: small;
-  }
+  
  
 
+
+
+
+ 
 
 
 

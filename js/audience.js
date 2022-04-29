@@ -73,8 +73,6 @@ class Audience{
                 audience.setCountry(this.value);
             })
 
-
-
             let expandBtn = document.createElement('button');
             expandBtn.setAttribute("id", "expandAudBtn_"+this.audNumber);
             expandBtn.setAttribute("class","expandBtn");
