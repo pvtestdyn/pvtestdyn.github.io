@@ -129,7 +129,7 @@ class Audience{
             })
         
         expandBtn.addEventListener("click", function(){
-            expand(innerBox, expandBtn);
+            expand(innerBox, this);
         });
     }
     incrementCriteriaIdx(){

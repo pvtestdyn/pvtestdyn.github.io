@@ -73,7 +73,7 @@ function selectAttribute(selectElem, tray) {
 
 
     deleteAttrBtn.addEventListener("click", function(){
-        deleteFromTray(deleteAttrBtn);
+        deleteFromTray(this);
     })
 }
 
@@ -100,9 +100,7 @@ function expand(elem, button) {
  */
   function searchbox(input, sel) {
     let filter, i, txtValue;
-    // input = document.getElementById("searchboxInput");
     filter = input.value.toUpperCase();
-    // sel = document.getElementById("attributeList");
     op = sel.getElementsByTagName("option");
     for (let i = 0; i < op.length; i++) {
         txtValue = op[i].textContent || op[i].innerText;

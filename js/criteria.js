@@ -23,7 +23,7 @@
         
         let anyOfText = "Any of:";
         if (this.criNumber>0){
-            anyOfText = "and and of:"
+            anyOfText = "and any of:"
         }
         criteriaBox.innerHTML = "<p>"+anyOfText+"</p>";
          
@@ -104,16 +104,16 @@
             }
             
         selectItem.addEventListener("change", function(){
-            selectAttribute(selectItem, tray);
+            selectAttribute(this, tray);
         });
 
 
         expandBtnAttributes.addEventListener("click", function(){
-            expand(contentCriteria, expandBtnAttributes);
+            expand(contentCriteria, this);
         });
 
         searchBox.addEventListener("keyup", function(){
-            searchbox(searchBox, selectItem);
+            searchbox(this, selectItem);
         })
         
         audienceContainer.append(criteriaBox);
@@ -129,7 +129,6 @@
     }
 
     processAttribute(attrib, catob){
-        console.log("ciao");
         let op = document.createElement("option");
         
         let opID = "aud_"+this.audNumber+"-cri_"+this.criNumber+"-attr"+attrib["key"];
