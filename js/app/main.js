@@ -84,7 +84,6 @@ function selectAttribute(selectElem, tray) {
  */
   function expand(elem, button) {
     let state = button.getAttribute("class");
-    console.log(state);
     if (state.includes("left")){
         elem.style.display = "none";
         state = state.replace("left", "down");
@@ -94,7 +93,6 @@ function selectAttribute(selectElem, tray) {
       elem.style.display = "block";
       state = state.replace("down", "left");
     }
-    console.log(state);
     button.setAttribute("class", state);
   }
 
