@@ -19,7 +19,7 @@
         let audienceContainer = document.querySelector("#aud-inner-box_"+this.audNumber);
         let criteriaBox = document.createElement('div');
         criteriaBox.setAttribute("id","CRITERIABOXaud_"+this.audNumber+"-cri_"+this.criNumber);
-        criteriaBox.setAttribute("class","criteriaBox");
+        criteriaBox.setAttribute("class","criteriaBox container-md border");
         
         let anyOfText = "Any of:";
         if (this.criNumber>0){
@@ -41,22 +41,24 @@
         headerCriteria.setAttribute("id", "HEADERCRITERIA-aud_"+this.audNumber+"-cri_"+this.criNumber);
         criteriaBox.appendChild(headerCriteria);
 
+         // create expand button for attribute list 
+         let expandBtnAttributes = document.createElement('button');
+         expandBtnAttributes.setAttribute("class","expand-attributes-btn arrow left");
+         expandBtnAttributes.setAttribute("id", "expand-attributes-btn_aud-"+this.audNumber+"-cri_"+this.criNumber);
+         // expandBtnAttributes.setAttribute("Value", this.audNumber+"-"+this.criNumber);
+         // expandBtnAttributes.innerHTML = "▲";
+        //  headerCriteria.append(expandBtnAttributes);
+        criteriaBox.append(expandBtnAttributes);
+ 
             // create tray
             let tray = document.createElement("div");
-            tray.setAttribute("class", "tray");
+            tray.setAttribute("class", "tray container-md");
             tray.setAttribute("aud-id",this.audNumber);
             tray.setAttribute("cri-id",this.criNumber);
             tray.setAttribute("id","TRAY-aud_"+this.audNumber+"-cri_"+this.criNumber);
             headerCriteria.appendChild(tray);
 
-            // create expand button for attribute list 
-            let expandBtnAttributes = document.createElement('button');
-            expandBtnAttributes.setAttribute("class","expand-attributes-btn");
-            expandBtnAttributes.setAttribute("id", "expand-attributes-btn_aud-"+this.audNumber+"-cri_"+this.criNumber);
-            // expandBtnAttributes.setAttribute("Value", this.audNumber+"-"+this.criNumber);
-            expandBtnAttributes.innerHTML = "▲";
-            headerCriteria.append(expandBtnAttributes);
-
+       
         // this container contains search button and list.
         let contentCriteria = document.createElement("div");
         contentCriteria.setAttribute("class", "CONTENTCRITERIA");
@@ -73,7 +75,7 @@
             // create attribute list
             let selectItem = document.createElement('select');
             selectItem.setAttribute("multiple",true);
-            selectItem.setAttribute("class", "attributeSelectItem");
+            selectItem.setAttribute("class", "attributeSelectItem form-select");
             selectItem.setAttribute("id","select-attributes_aud-"+this.audNumber+"-cri_"+this.criNumber)
             contentCriteria.append(selectItem);
 

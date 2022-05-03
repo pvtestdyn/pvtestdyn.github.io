@@ -17,9 +17,9 @@ class Audience{
     createAudienceContainer(){
         let content = document.querySelector("#content");
 
-        let audBox = document.createElement('section');
+        let audBox = document.createElement('div');
         audBox.setAttribute("id","AUDIENCEBOX_"+this.audNumber);
-        audBox.setAttribute("class","audienceBox");
+        audBox.setAttribute("class","audienceBox container-md border");
         content.append(audBox);
 
         let headerAudience = document.createElement("div");
@@ -73,12 +73,13 @@ class Audience{
                 audience.setCountry(this.value);
             })
 
-            let expandBtn = document.createElement('button');
-            expandBtn.setAttribute("id", "expandAudBtn_"+this.audNumber);
-            expandBtn.setAttribute("class","expandBtn");
-            expandBtn.setAttribute("value", this.audNumber);
-            expandBtn.innerHTML = "▲";
-            headerAudience.append(expandBtn);
+        let expandBtn = document.createElement('button');
+        expandBtn.setAttribute("id", "expandAudBtn_"+this.audNumber);
+        expandBtn.setAttribute("class","expandBtn arrow left");
+        expandBtn.setAttribute("value", this.audNumber);
+        // expandBtn.innerHTML = "▲";
+        headerAudience.append(expandBtn);
+        // audBox.append(expandBtn);
 
         // inner box   aud-inner-box_"
         // inner box contains: age boxes, addcriteria button, criteria

@@ -82,15 +82,20 @@ function selectAttribute(selectElem, tray) {
  * @param {HTMLDivElement} elem an element to expand, like the audience or criteria box.
  * @param {HTMLButtonElement} button accordion button.
  */
-function expand(elem, button) {
-    if (button.innerHTML === "▲"){
+  function expand(elem, button) {
+    let state = button.getAttribute("class");
+    console.log(state);
+    if (state.includes("left")){
         elem.style.display = "none";
-        button.innerHTML = "▼";
-    } 
+        state = state.replace("left", "down");
+        
+    }
     else {
       elem.style.display = "block";
-      button.innerHTML = "▲";
+      state = state.replace("down", "left");
     }
+    console.log(state);
+    button.setAttribute("class", state);
   }
 
 /**

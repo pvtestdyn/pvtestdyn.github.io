@@ -1,5 +1,4 @@
- 
- :root {
+:root {
   --colour-1: rgb(15, 157, 88);
   --colour-2: #fff;
   --colour-3: rgb(32, 31, 80);
@@ -9,37 +8,57 @@
   --dynBlue:#1b365d;
   --dynOrange:#dc582a;
 } 
- 
- *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: 100%;
-} 
 
+body {
+  background-image: url("../imgs/tower-bridge__.jpg");
+  background-size:cover; 
+  background-repeat:no-repeat;
+}
+
+
+.arrow {
+    border: solid black;
+    border-width: 0 .2rem .2rem 0;
+    display: inline-block;
+    background-color: inherit;
+    /* padding: 1rem; */
+  }
+.arrow:hover {
+  background-color: inherit;
+  border-width: 0 .3rem .3rem 0;
+}
   
-  body {
-    background-image: url("../imgs/tower-bridge__.jpg");
-    background-size:cover; 
-    background-repeat:no-repeat;
-    font-family: 'Montserrat', sans-serif;
-    /* background: var(--colour-2); */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column; 
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  
+  .left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+  
+  .up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
+  
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
   }
 
-  
 
-  header{
-    display: flex;
-    align-items: row;
-    align-items: center;
-    justify-content: center;
-  }  
+  button {
+    background: var(--colour-5);
+    color: var(--colour-3);
+    padding: .6rem;
+    margin: .2rem 0rem 0rem 1rem;
+    border: none;
+    border-radius: .2rem;
+  } 
 
-   #build, #submit{
+  #build, #submit{
     margin: 1.5rem;
     color: var(--colour-2);
     background-color: var(--dynOrange);
@@ -53,229 +72,141 @@
     display: none;
   }
 
-
-  section {
-    width: 50rem;
-    background: var(--colour-2);
-    padding: 1rem 1rem 1rem 1rem;
-
-    overflow: hidden;
-    transition: max-height 1s;
-    text-align: justify;
-    margin: 1rem;
-    border-radius: .5rem;
-  }
-
-
-
-  button {
-    background: var(--colour-5);
-    color: var(--colour-3);
-    padding: .6rem;
-    margin: .2rem 0rem 0rem 1rem;
-    border: none;
-    border-radius: .2rem;
-  } 
-
-  
-
   button:hover {
     cursor: pointer;
     background: var(--colour-4);
     color: var(--colour-2);
   } 
 
-.audienceBox{
-  border: .16rem solid var(--colour-5);
-}
 
-.HEADERAUDIENCE{
-  position: relative;
-  display: flex;
-  /* align-items: left; */
-  justify-content: left;
-  flex-direction: row; 
-  
-}
-
-  .expandBtn{
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: none;
-  }
-
-  .expandBtn, .expand-attributes-btn, .delete-attr-btn {
+  .audienceBox {
+    /* width: 50rem; */
     background: var(--colour-2);
+    padding: 1rem 1rem 1rem 1rem;
+
+    /* overflow: hidden; */
+    transition: max-height 1s;
+    text-align: justify;
+    margin: 1rem;
+    border-radius: .5rem;
+    /* position: relative; */
   }
-  
-  .expandBtn:hover, .expand-attributes-btn:hover{
-    color: var(--colour-4);
-    background: var(--colour-2);
-  
+    .expandBtn{
+      /* position: absolute; */
+      float: right;
+      top: 0;
+      right: 0;
+    }
+
+  .HEADERAUDIENCE{
+    /* position: relative; */
+    /* display: flex; */
+    justify-content: left;
+    flex-direction: row; 
   }
+
+
 
   .audiencename-box, .country-select{
     margin: 0rem 0rem 0rem 1rem;
     border-radius: 0.1rem;
     border: .1rem solid var(--colour-5);
-    height: 2.4rem;
+    /* height: 2.4rem; */
     padding-left: 1rem;
   }
+
   .audiencename-box{
-    width: 25rem;
-  }
-  .country-select{
-    width: 10rem;
+    /* width: 25rem; */
   }
 
-  .country-option{
-    height: 3rem;
-  
+  .ageBox{
+    width: 2.2rem;
+
+    margin: 1rem;
+    border-radius: .1rem;
+    border: .1rem solid var(--colour-5);
+    text-align: center;
   }
 
 
-.ageBox{
-  width: 2.2rem;
-  height: 2.2rem;
-  margin: .5rem;
-  border-radius: .1rem;
-  border: .1rem solid var(--colour-5);
-  text-align: center;
-}
+  .innerBox{
+    position: relative;
+    margin: 1rem;
+  }
+    .addCriteriaBtn{
+      position: absolute;
+      right: 0rem;
 
-.innerBox{
-  position: relative;
-  margin: 1rem;
-}
+    }
 
-.addCriteriaBtn{
-  position: absolute;
-  right: 0;
-  margin-right: 2rem;
-}
+  .criteriaBox{
+    border: .16rem solid var(--colour-5);
+    margin: 1rem .5rem 1.5rem .5rem;
+    padding: .2rem;
+    border-radius: .5rem;
+    position: relative;
+    margin: .5rem;
+  }
+    .expand-attributes-btn{
+      position: absolute;
+      top: 0;
+      right: 0;
+      /* height: 2rem; */
+      margin: 1rem;
+      padding: .5rem;
+    }
 
 
+.HEADERCRITERIA{
+/* position: relative; */
+margin: .5rem;
 
-.criteriaBox{
+} 
+
+.tray{
+  min-height: 2rem;
   border: .16rem solid var(--colour-5);
-  margin: 1rem .5rem 1.5rem .5rem;
-  padding: .2rem;
   border-radius: .5rem;
 }
 
-.criteriaBox p{
-  margin: .2rem 0rem 0rem .5rem;
+.search-attribute-box{
+  margin: 0rem 0rem .5rem 0rem;
+  border-radius: .1rem;
+  border: 0.1rem solid var(--colour-5);
 }
 
-.HEADERCRITERIA{
-  position: relative;
-  margin: .5rem;
+
+.attr-in-tray{
+  border: .01rem solid var(--colour-5);
+  margin: 0.25rem;
+  border-radius: .1rem;
+  /* font-size: small; */
+  background-color: var(--colour-4);
+  color: var(--colour-2);
+  padding-left: .25rem;
+  /* height: fit-content; */
 }
 
+.attr-in-tray p{
  
-  .tray{
-    min-height: 2rem;
-    width: 40rem;
-    border: .16rem solid var(--colour-5);
-    border-radius: .5rem;
-  }
-  .expand-attributes-btn{
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 2rem;
     margin: 0;
-    padding: .5rem;
-  }
-
-
-.CONTENTCRITERIA{
-  position: relative;
-} 
-  .search-attribute-box{
-    height: 2rem;
-    position:absolute;
-    left: 0;
-    right: 0;
-    margin: 0rem 3.8rem 0rem .6rem;
-    border-radius: .1rem;
-    border: 0.1rem solid var(--colour-5);
-  }
-
-  .attributeSelectItem{
-    overflow: auto;
-    margin: 2rem 4rem 0rem .6rem;
-    height: 15rem;
-    width: 39.65rem;
-    border: .1rem solid var(--colour-5);
-  }
-
-
-
-  .attribute{
-    padding: .5rem;
-    border-radius: .1rem;
-    border: .1rem solid var(--colour-5);
-
-  }
-
-
-  .attribute:hover {
-    cursor: pointer;
-    background: var(--colour-4);
-    color: var(--colour-2);
-  }
-
-  .category-label{
-    margin: .5rem 0rem .5rem 0rem;
-    padding: .5rem;
-  }
-
-  .attr-in-tray{
-    border: .01rem solid var(--colour-5);
-    margin: 0.25rem;
-    border-radius: .1rem;
-    font-size: small;
-    background-color: var(--colour-4);
-    color: var(--colour-2);
-    padding: 0rem;
-    height: fit-content;
     padding: 0;
-  }
-
-  .delete-attr-btn{
-    border-left: .01rem solid var(--colour-5);
-    color: var(--colour-2);
-    background-color: var(--colour-4);
-    border-radius: 0;
-    height: fit-content;
-    padding: .25rem;
-    margin: .25rem;
-  }
-  .delete-attr-btn:hover{
-    color: var(--colour-3);
-    font-weight: bold;
-  } 
-
-
-  .category{
-    padding: 1rem 0rem 0rem .5rem;
-
-    
-  }
-
   
- 
+}
 
+.delete-attr-btn{
+  color: var(--colour-3);
+  background-color: var(--colour-4);
+  /* font-size: large; */
+  /* /* padding: .25rem; */
+  /* margin: .25rem;  */
+  margin-left: .25rem;
+  margin-right: .25rem;
+  padding: 0;
+  
 
-
-
- 
-
-
-
-
-
-
- 
+}
+.delete-attr-btn:hover{
+  color: var(--colour-2);
+  font-weight: bold;
+} 
