@@ -1,7 +1,7 @@
 
 /**
  * prototype, work in progress.
- * Contains all aiudiences craeted.
+ * Contains all aiudiences created.
  */
 class Main{
     constructor(){

@@ -10,7 +10,8 @@
 } 
 
 body {
-  background-image: url("../imgs/tower-bridge__.jpg");
+  background-image: url("../imgs/dynata-cool-proto.png");
+  height: fit-content;
   background-size:cover; 
   background-repeat:no-repeat;
 }
@@ -21,7 +22,6 @@ body {
     border-width: 0 .2rem .2rem 0;
     display: inline-block;
     background-color: inherit;
-    /* padding: 1rem; */
   }
 .arrow:hover {
   background-color: inherit;
@@ -80,27 +80,20 @@ body {
 
 
   .audienceBox {
-    /* width: 50rem; */
     background: var(--colour-2);
     padding: 1rem 1rem 1rem 1rem;
-
-    /* overflow: hidden; */
     transition: max-height 1s;
     text-align: justify;
     margin: 1rem;
     border-radius: .5rem;
-    /* position: relative; */
   }
     .expandBtn{
-      /* position: absolute; */
       float: right;
       top: 0;
       right: 0;
     }
 
   .HEADERAUDIENCE{
-    /* position: relative; */
-    /* display: flex; */
     justify-content: left;
     flex-direction: row; 
   }
@@ -111,13 +104,9 @@ body {
     margin: 0rem 0rem 0rem 1rem;
     border-radius: 0.1rem;
     border: .1rem solid var(--colour-5);
-    /* height: 2.4rem; */
     padding-left: 1rem;
   }
 
-  .audiencename-box{
-    /* width: 25rem; */
-  }
 
   .ageBox{
     width: 2.2rem;
@@ -151,14 +140,12 @@ body {
       position: absolute;
       top: 0;
       right: 0;
-      /* height: 2rem; */
       margin: 1rem;
       padding: .5rem;
     }
 
 
 .HEADERCRITERIA{
-/* position: relative; */
 margin: .5rem;
 
 } 
@@ -180,11 +167,9 @@ margin: .5rem;
   border: .01rem solid var(--colour-5);
   margin: 0.25rem;
   border-radius: .1rem;
-  /* font-size: small; */
   background-color: var(--colour-4);
   color: var(--colour-2);
   padding-left: .25rem;
-  /* height: fit-content; */
 }
 
 .attr-in-tray p{
@@ -197,9 +182,6 @@ margin: .5rem;
 .delete-attr-btn{
   color: var(--colour-3);
   background-color: var(--colour-4);
-  /* font-size: large; */
-  /* /* padding: .25rem; */
-  /* margin: .25rem;  */
   margin-left: .25rem;
   margin-right: .25rem;
   padding: 0;
